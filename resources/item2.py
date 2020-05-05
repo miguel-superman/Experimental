@@ -54,9 +54,9 @@ class Item(Resource):
         return {'message': 'Item deleted'}
 
     def put(self,name):
-        data = request.get_json()
+        data = Item.parser.parse_args()
         item = ItemModel.find_by_name(name)
-        updated_item = ItemModel(name,data['price'])
+        #updated_item = ItemModel(name,data['price'])
 
         if item is None:
             item = ItemModel(name,data['price'], data['store_id'])
