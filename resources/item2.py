@@ -1,5 +1,4 @@
 import sqlite3
-from Requests import request
 from flask_restful import Resource , reqparse
 from flask_jwt import jwt_required
 from flask import jsonify
