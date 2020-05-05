@@ -15,8 +15,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
-db.init_app(app)
-
 jwt = JWT(app, authenticate, identity)
 
 app.add_resource(Store,'/store/')
