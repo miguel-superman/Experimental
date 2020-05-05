@@ -1,5 +1,5 @@
 from db import db
-from itemsmodel1 import ItemModel
+from itemsModel1 import ItemModel
 
 
 class StoreModel(db.Model):
