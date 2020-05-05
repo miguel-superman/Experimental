@@ -1,4 +1,5 @@
 from db import db
+from store import StoreModel
 
 
 class ItemModel(db.Model):
@@ -16,7 +17,7 @@ class ItemModel(db.Model):
         self.price= price
         self.store_id = store_id
 
-        
+
     def json(self):
         return {'name':self.name,'price': self.price}
 

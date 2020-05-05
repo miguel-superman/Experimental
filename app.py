@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
-from db import db
+
 
 from security import authenticate, identity
 from resources.item1 import Item, Itemlist
@@ -23,4 +23,6 @@ api.add_resource(Itemlist, '/items')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
+    from db import db
+    db.init_app(app)
     app.run(debug=True)  # important to mention debug=True
